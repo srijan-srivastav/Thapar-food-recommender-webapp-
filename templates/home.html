@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Thapar Food Recommender</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Kanit|Permanent+Marker|Righteous" rel="stylesheet"> 
+  <style>
+  .content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-family: 'Righteous';
+}
+ .content-section1 {
+  background: #ffffff;
+  padding: 10px 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-color:gray;
+  font-family: 'Righteous';
+}
+.text_box {
+    height:50px;
+    width:550px;
+}
+.btn
+{
+  width: 130px;
+  height: 60px;
+  font-family: 'Righteous';
+  font-size: 25px;
+}
+</style>
+</head>
+<body  >
+<div class="jumbotron text-center " style="background: white">
+  <h1 style="font-family:'Righteous';font-size:70px;color:blue">Thapar Food Recommender System</h1> 
+</div>
+  <div class="">
+    <form method="POST" action={{url_for('prediction')}}>
+      {{forma.hidden_tag()}}
+      <fieldset class="">
+        <legend style="font-family: 'Righteous';color: green;text-align: center;font-size: 50px;">
+          What to have next?
+        </legend>
+        <div class="form-group" style="text-align: center;margin-top: 50px"> 
+          {{forma.comment.label(class="content-section1")}}
+          {{forma.comment(class="text_box")}}
+        </div>
+      </fieldset>
+      <div class="form-group" style="text-align: center;margin-top:-20px;font-family:'Allerta Stencil';font-size: 60px;">
+        {{forma.submit(class="btn btn-outline-info")}}
+      </div>
+    </form>
+  </div>
+    
+
+</body>
+</html>
